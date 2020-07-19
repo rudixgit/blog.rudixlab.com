@@ -39,9 +39,6 @@ const keywords = [
   'shemale accidental anal',
   'shemale accidental creampie',
   'shemale accidental orgasm',
-  'shemale addison rose',
-  'shemale adriana nicole',
-  'shemale alicia rhodes',
 ]
 
 exports.createPages = ({ actions }) => {
