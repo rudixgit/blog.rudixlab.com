@@ -58,7 +58,7 @@ const IndexPage = ({ data, pageContext }) => {
 
 export const query = graphql`
   query MyQuery {
-    allSitePage(limit: 10, skip: 10) {
+    allSitePage(limit: 10) {
       nodes {
         context {
           keyword
