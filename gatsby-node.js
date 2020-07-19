@@ -427,7 +427,6 @@ const keywords = [
   'onlinebaexoxo',
   'cbtcloud',
   'cuminhimdaily',
-  'kaiyennaaa	',
 ]
 
 exports.createPages = ({ actions }) => {
