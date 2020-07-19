@@ -39,27 +39,30 @@ const keywords = [
   'shemale accidental anal',
   'shemale accidental creampie',
   'shemale accidental orgasm',
+  'abbey brooks',
+  'shemale abused',
+  'shemale accidental anal',
+  'shemale accidental creampie',
+  'shemale accidental orgasm',
 ]
 
 exports.createPages = ({ actions }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`src/pages/index.js`)
-  _.shuffle(process.env.USER === 'arpecop' ? keywords2 : keywords).forEach(
-    (element) => {
-      createPage({
-        // Path for this page — required
-        path: `${slugify(element)}`,
-        component: blogPostTemplate,
-        context: {
-          keyword: element,
-          text: randomize(content, element),
-          items: _.shuffle(keywords)
-            .slice(0, 5)
-            .map((item) => {
-              return { item: item, slug: slugify(item) }
-            }),
-        },
-      })
-    }
-  )
+  _.shuffle(keywords).forEach((element) => {
+    createPage({
+      // Path for this page — required
+      path: `${slugify(element)}`,
+      component: blogPostTemplate,
+      context: {
+        keyword: element,
+        text: randomize(content, element),
+        items: _.shuffle(keywords)
+          .slice(0, 5)
+          .map((item) => {
+            return { item: item, slug: slugify(item) }
+          }),
+      },
+    })
+  })
 }

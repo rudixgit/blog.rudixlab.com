@@ -21,7 +21,10 @@ const IndexPage = ({ data, pageContext }) => {
       {data1.map((item) => (
         <div>
           <a href={item.url}>
-            <img src={'//graphqldbone.herokuapp.com' + item.images.url} />
+            <img
+              src={'//graphqldbone.herokuapp.com' + item.images.url}
+              alt=""
+            />
           </a>
         </div>
       ))}
@@ -55,7 +58,7 @@ const IndexPage = ({ data, pageContext }) => {
 
 export const query = graphql`
   query MyQuery {
-    allSitePage(limit: 10, skip: 10) {
+    allSitePage(limit: 10) {
       nodes {
         context {
           keyword
