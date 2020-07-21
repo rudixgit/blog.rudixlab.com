@@ -45,7 +45,7 @@ const IndexPage = ({ data, pageContext }) => {
             return (
               <div>
                 <a href={'' + item.path}>
-                  <b>{item.context.keyword}</b>
+                  <b>{item.context ? item.context.keyword : 'keyword'}</b>
                 </a>
               </div>
             )
