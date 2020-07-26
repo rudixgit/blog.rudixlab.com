@@ -34,7 +34,9 @@ const IndexPage = ({ data, pageContext }) => {
           {pageContext.items.map((item) => {
             return (
               <div>
-                <a href={'/' + item.slug}>{item.item}</a>
+                <a href={'https://blog.rudixlab.com/' + item.slug}>
+                  {item.item}
+                </a>
               </div>
             )
           })}
@@ -44,7 +46,7 @@ const IndexPage = ({ data, pageContext }) => {
           {data.allSitePage.nodes.map((item) => {
             return (
               <div>
-                <a href={'' + item.path}>
+                <a href={'https://blog.rudixlab.com' + item.path}>
                   <b>{item.context ? item.context.keyword : 'keyword'}</b>
                 </a>
               </div>
